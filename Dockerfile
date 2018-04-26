@@ -1,4 +1,4 @@
-FROM java:8-jre
+FROM ubuntu
 #https://github.com/docker-library/tomcat
 
 ENV CATALINA_HOME /usr/local/tomcat
@@ -34,7 +34,6 @@ RUN set -x \
     
     
 RUN apt-get update
-RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y git maven
 RUN apt-get install -y xvfb libxi6 libgconf-2-4
 RUN apt-get install wget unzip curl
