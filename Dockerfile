@@ -1,10 +1,18 @@
+
 FROM ubuntu
+MAINTAINER Avijit Samanta
 
 # Update and install s/w
 RUN apt-get update
 RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y git maven
 RUN apt-get install -y xvfb libxi6 libgconf-2-4
+
+
+RUN git clone -b master --single-branch https://github.com/ganeshtidke0901/petclinic.git
+WORKDIR /petclinic
+
+RUN mvn build
 
 
 #https://github.com/docker-library/tomcat
@@ -28,9 +36,6 @@ RUN rm bin/*.bat
 RUN rm apache-tomcat-8.5.30.tar.gz*
 
 
-RUN git clone -b master --single-branch https://github.com/ganeshtidke0901/petclinic.git
-WORKDIR /  
-RUN mvn build
 
 ADD ./target/*.war $CATALINA_HOME/webapps/
 
