@@ -13,8 +13,8 @@ RUN gpg --keyserver pool.sks-keyservers.net --recv-keys 05AB33110949707C93A279E3
 RUN apt-get update
 
 RUN set -x
-RUN curl -fSL "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz" -o tomcat.tar.gz 
-RUN curl -fSL "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz.asc" -o tomcat.tar.gz.asc 
+RUN wget -N "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz" -o tomcat.tar.gz 
+RUN wget -N "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz.asc" -o tomcat.tar.gz.asc 
 RUN tar -xvf tomcat.tar.gz --strip-components=1 
 RUN rm bin/*.bat 
 RUN rm tomcat.tar.gz*
