@@ -25,7 +25,6 @@ RUN rm apache-tomcat-8.5.30.tar.gz*
 
 RUN apt-get install -y git maven
 RUN apt-get install -y xvfb libxi6 libgconf-2-4
-RUN apt-get install wget unzip curl
 
 RUN git clone -b master --single-branch https://github.com/ganeshtidke0901/petclinic.git
 WORKDIR /  
