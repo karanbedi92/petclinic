@@ -17,7 +17,7 @@ RUN wget -N "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomc
 RUN wget -N "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz.asc" 
 RUN tar -xvf apache-tomcat-8.5.30.tar.gz --strip-components=1 
 RUN rm bin/*.bat 
-RUN rm tomcat.tar.gz*
+RUN rm apache-tomcat-8.5.30.tar.gz*
 
     
     
