@@ -1,5 +1,6 @@
 FROM ubuntu
 
+RUN apt-get update -y 
 RUN apt-get install -y openjdk-8-jdk
 RUN git clone -b master --single-branch https://github.com/ganeshtidke0901/petclinic.git
 WORKDIR /  
