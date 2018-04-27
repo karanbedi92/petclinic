@@ -23,6 +23,7 @@ RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
     F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
 
 
+RUN apt-get install curl
 RUN set -x 
 RUN curl -fSL "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz" -o tomcat.tar.gz 
 RUN curl -fSL "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz.asc" -o tomcat.tar.gz.asc 
