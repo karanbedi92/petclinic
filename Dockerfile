@@ -23,13 +23,13 @@ RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
     F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
 
 
-RUN set -x \
-    && curl -fSL "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz" -o tomcat.tar.gz \
-    && curl -fSL "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz.asc" -o tomcat.tar.gz.asc \
-    && gpg --verify tomcat.tar.gz.asc \
-    && tar -xvf tomcat.tar.gz --strip-components=1 \
-    && rm bin/*.bat \
-    && rm tomcat.tar.gz*
+RUN set -x 
+RUN curl -fSL "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz" -o tomcat.tar.gz 
+RUN curl -fSL "https://www.apache.org/dist/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz.asc" -o tomcat.tar.gz.asc 
+RUN tar -xvf tomcat.tar.gz --strip-components=1 
+RUN rm bin/*.bat 
+RUN rm tomcat.tar.gz*
+
     
     
     
