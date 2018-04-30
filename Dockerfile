@@ -12,7 +12,7 @@ RUN apt-get install -y xvfb libxi6 libgconf-2-4
 RUN git clone -b master --single-branch https://github.com/ganeshtidke0901/petclinic.git
 WORKDIR /petclinic
 
-RUN mvn build
+RUN mvn clean package
 
 
 #https://github.com/docker-library/tomcat
