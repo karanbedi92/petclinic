@@ -37,7 +37,7 @@ RUN rm apache-tomcat-8.5.30.tar.gz*
 
 
 
-ADD ./target/*.war $CATALINA_HOME/webapps/
+ADD ./petclinic/target/*.war $CATALINA_HOME/webapps/
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
