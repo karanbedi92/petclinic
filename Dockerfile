@@ -1,6 +1,6 @@
 
 FROM ubuntu
-MAINTAINER Avijit Samanta
+MAINTAINER Ganesh Tidke
 
 # Update and install s/w
 RUN apt-get update
