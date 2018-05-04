@@ -1,6 +1,6 @@
 
 FROM ubuntu
-MAINTAINER Ganesh Tidke
+MAINTAINER Ganesh Tidk
 
 # Update and install s/w
 RUN apt-get update
